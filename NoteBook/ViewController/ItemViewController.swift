@@ -25,6 +25,7 @@ class ItemViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
     }
     
     
@@ -38,8 +39,9 @@ class ItemViewController: UITableViewController {
         
         if let item=todoItem?[indexPath.row]{
             
-            cell.textLabel?.text=item.title
             
+//            cell.textLabel?.text = item.title + "\(item.dateCreated)"
+            cell.textLabel?.text = item.title
             cell.accessoryType=item.done ? .checkmark: .none
         }
         else{
@@ -82,6 +84,7 @@ class ItemViewController: UITableViewController {
                         
                         let newItem=Item()
                         newItem.title = textField.text!
+                        newItem.dateCreated = Date()
                         currentCategory.items.append(newItem)
                         
                     }
@@ -113,5 +116,23 @@ class ItemViewController: UITableViewController {
         
     }
     
+}
+
+extension ItemViewController:UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+//        todoItem = todoItem?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "title", ascending: true)
+        todoItem = todoItem?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: true)
+        tableView.reloadData()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadItem()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
 }
 
