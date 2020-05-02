@@ -9,8 +9,9 @@
 import UIKit
 import RealmSwift
 import SwipeCellKit
+import ChameleonFramework
 
-class NoteBookTableViewController: UITableViewController {
+class NoteBookTableViewController: SwipeTableViewController {
     
     let realm = try! Realm()
     
@@ -21,6 +22,7 @@ class NoteBookTableViewController: UITableViewController {
         
         loadCategori()
         tableView.rowHeight = 80.0
+        tableView.separatorStyle = .none
         
     }
     
@@ -30,18 +32,25 @@ class NoteBookTableViewController: UITableViewController {
     }
     
     
-    //    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    //        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! SwipeTableViewCell
-    //        cell.delegate = self
-    //        return cell
-    //    }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell=tableView.dequeueReusableCell(withIdentifier: "categorieCell", for: indexPath) as! SwipeTableViewCell
+        //        let cell=tableView.dequeueReusableCell(withIdentifier: "categorieCell", for: indexPath) as! SwipeTableViewCell
         
-        cell.delegate = self
+        //        cell.delegate = self
+        let cell=super.tableView(tableView, cellForRowAt: indexPath)
+       if let category = categories?[indexPath.row]{
         
-        cell.textLabel?.text = categories?[indexPath.row].name ?? "No Categorie added yet"
+        guard let backColor=UIColor(hexString: category.color) else {fatalError()}
+        
+        cell.textLabel?.text = category.name
+        cell.backgroundColor = backColor
+        cell.textLabel?.textColor = ContrastColorOf(backColor, returnFlat: true)
+        
+        }else{
+            cell.textLabel?.text = "No Categorie added yet"
+            cell.backgroundColor = UIColor(hexString:"28AAC0")
+        }
+       
         
         return cell
     }
@@ -70,7 +79,10 @@ class NoteBookTableViewController: UITableViewController {
         let action=UIAlertAction(title: "add", style:.default) { (action) in
             
             let newCategorie = Categorie()
-            newCategorie.name=textField.text!
+            
+            newCategorie.name = textField.text!
+            
+            newCategorie.color = UIColor.randomFlat().hexValue()
             
             self.save(categorie: newCategorie)
         }
@@ -97,49 +109,66 @@ class NoteBookTableViewController: UITableViewController {
         
         tableView.reloadData()
     }
+    
     func loadCategori(){
         
         categories=realm.objects(Categorie.self)
         tableView.reloadData()
     }
     
-    
+    override func updateData(at indexPath: IndexPath) {
+        
+        super.updateData(at: indexPath)
+        
+        if let item = categories?[indexPath.row]{
+            do{
+                try realm.write{
+                    realm.delete(item)
+                }
+            }catch{
+                print("Error deleting categorie data \(error)")
+            }
+            //tableView.reloadData()
+            
+        }
+        
+    }
     
 }
 // MARK: swipe table view delegate
 
-extension NoteBookTableViewController: SwipeTableViewCellDelegate{
-    
-    
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
-        guard orientation == .right else { return nil }
-        
-        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
-            print("item delete")
-            // handle action by updating model with deletion
-            if let item = self.categories?[indexPath.row]{
-                do{
-                    try self.realm.write{
-                        self.realm.delete(item)
-                    }
-                }catch{
-                    print("Error deleting categorie data \(error)")
-                }
-                //tableView.reloadData()
-                
-            }
-            
-        }
-        // customize the action appearance
-        deleteAction.image = UIImage(named: "Delete-Icon")
-        
-        return [deleteAction]
-    }
-    
-    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
-        var options = SwipeOptions()
-        options.expansionStyle = .destructive
-       // options.transitionStyle = .border
-        return options
-    }
-}
+//extension NoteBookTableViewController: SwipeTableViewCellDelegate{
+//    
+//    
+//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+//        guard orientation == .right else { return nil }
+//        
+//        let deleteAction = SwipeAction(style: .destructive, title: "Delete") { action, indexPath in
+//            print("item delete")
+//            // handle action by updating model with deletion
+//            if let item = self.categories?[indexPath.row]{
+//                do{
+//                    try self.realm.write{
+//                        self.realm.delete(item)
+//                    }
+//                }catch{
+//                    print("Error deleting categorie data \(error)")
+//                }
+//                //tableView.reloadData()
+//                
+//            }
+//            
+//        }
+//        // customize the action appearance
+//        deleteAction.image = UIImage(named: "Delete-Icon")
+//        
+//        return [deleteAction]
+//    }
+//    
+//    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+//        var options = SwipeOptions()
+//        options.expansionStyle = .destructive
+//       // options.transitionStyle = .border
+//        return options
+//    }
+//}

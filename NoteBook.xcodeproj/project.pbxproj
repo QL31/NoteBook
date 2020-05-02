@@ -17,6 +17,7 @@
 		0AE0DBF0245CDE18002E15B4 /* NoteBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0DBEF245CDE18002E15B4 /* NoteBookTableViewController.swift */; };
 		0AF175E0245CE13E0081FC02 /* Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF175DF245CE13E0081FC02 /* Categorie.swift */; };
 		0AF175E2245CE14C0081FC02 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF175E1245CE14C0081FC02 /* Item.swift */; };
+		0AF175E4245DBB8A0081FC02 /* SwipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF175E3245DBB8A0081FC02 /* SwipeTableViewController.swift */; };
 		6A500FB6E0499507605481FE /* Pods_NoteBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0EB1A4DB6F83A8EA96B41A /* Pods_NoteBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		0AE0DBEF245CDE18002E15B4 /* NoteBookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBookTableViewController.swift; sourceTree = "<group>"; };
 		0AF175DF245CE13E0081FC02 /* Categorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Categorie.swift; path = NoteBook/ViewController/Categorie.swift; sourceTree = SOURCE_ROOT; };
 		0AF175E1245CE14C0081FC02 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		0AF175E3245DBB8A0081FC02 /* SwipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewController.swift; sourceTree = "<group>"; };
 		5F0EB1A4DB6F83A8EA96B41A /* Pods_NoteBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2EA3320645C41C01F534615 /* Pods-NoteBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteBook.debug.xcconfig"; path = "Target Support Files/Pods-NoteBook/Pods-NoteBook.debug.xcconfig"; sourceTree = "<group>"; };
 		FEAC81B7A07AA736877193B7 /* Pods-NoteBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteBook.release.xcconfig"; path = "Target Support Files/Pods-NoteBook/Pods-NoteBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 			children = (
 				0AE0DBEF245CDE18002E15B4 /* NoteBookTableViewController.swift */,
 				0AE0DBDC245CDBD1002E15B4 /* ItemViewController.swift */,
+				0AF175E3245DBB8A0081FC02 /* SwipeTableViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AF175E4245DBB8A0081FC02 /* SwipeTableViewController.swift in Sources */,
 				0AE0DBF0245CDE18002E15B4 /* NoteBookTableViewController.swift in Sources */,
 				0AE0DBDD245CDBD1002E15B4 /* ItemViewController.swift in Sources */,
 				0AE0DBD9245CDBD1002E15B4 /* AppDelegate.swift in Sources */,
