@@ -3,29 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0AE0DBD9245CDBD1002E15B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0DBD8245CDBD1002E15B4 /* AppDelegate.swift */; };
 		0AE0DBDB245CDBD1002E15B4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0DBDA245CDBD1002E15B4 /* SceneDelegate.swift */; };
-		0AE0DBDD245CDBD1002E15B4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0DBDC245CDBD1002E15B4 /* ViewController.swift */; };
+		0AE0DBDD245CDBD1002E15B4 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0DBDC245CDBD1002E15B4 /* ItemViewController.swift */; };
 		0AE0DBE0245CDBD1002E15B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE0DBDE245CDBD1002E15B4 /* Main.storyboard */; };
 		0AE0DBE3245CDBD1002E15B4 /* NoteBook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0DBE1245CDBD1002E15B4 /* NoteBook.xcdatamodeld */; };
 		0AE0DBE5245CDBD8002E15B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE0DBE4245CDBD8002E15B4 /* Assets.xcassets */; };
 		0AE0DBE8245CDBD8002E15B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE0DBE6245CDBD8002E15B4 /* LaunchScreen.storyboard */; };
+		0AE0DBF0245CDE18002E15B4 /* NoteBookTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0DBEF245CDE18002E15B4 /* NoteBookTableViewController.swift */; };
+		0AF175E0245CE13E0081FC02 /* Categorie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF175DF245CE13E0081FC02 /* Categorie.swift */; };
+		0AF175E2245CE14C0081FC02 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AF175E1245CE14C0081FC02 /* Item.swift */; };
+		6A500FB6E0499507605481FE /* Pods_NoteBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F0EB1A4DB6F83A8EA96B41A /* Pods_NoteBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AE0DBD5245CDBD1002E15B4 /* NoteBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE0DBD8245CDBD1002E15B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE0DBDA245CDBD1002E15B4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0AE0DBDC245CDBD1002E15B4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0AE0DBDC245CDBD1002E15B4 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		0AE0DBDF245CDBD1002E15B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AE0DBE2245CDBD1002E15B4 /* NoteBook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteBook.xcdatamodel; sourceTree = "<group>"; };
 		0AE0DBE4245CDBD8002E15B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AE0DBE7245CDBD8002E15B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AE0DBE9245CDBD8002E15B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE0DBEF245CDE18002E15B4 /* NoteBookTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteBookTableViewController.swift; sourceTree = "<group>"; };
+		0AF175DF245CE13E0081FC02 /* Categorie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Categorie.swift; path = NoteBook/ViewController/Categorie.swift; sourceTree = SOURCE_ROOT; };
+		0AF175E1245CE14C0081FC02 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		5F0EB1A4DB6F83A8EA96B41A /* Pods_NoteBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NoteBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2EA3320645C41C01F534615 /* Pods-NoteBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteBook.debug.xcconfig"; path = "Target Support Files/Pods-NoteBook/Pods-NoteBook.debug.xcconfig"; sourceTree = "<group>"; };
+		FEAC81B7A07AA736877193B7 /* Pods-NoteBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NoteBook.release.xcconfig"; path = "Target Support Files/Pods-NoteBook/Pods-NoteBook.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A500FB6E0499507605481FE /* Pods_NoteBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +55,8 @@
 			children = (
 				0AE0DBD7245CDBD1002E15B4 /* NoteBook */,
 				0AE0DBD6245CDBD1002E15B4 /* Products */,
+				BBC86C53F9D08D0B4A6D1DE8 /* Pods */,
+				66835E21538D513EE0D2C591 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,14 +73,66 @@
 			children = (
 				0AE0DBD8245CDBD1002E15B4 /* AppDelegate.swift */,
 				0AE0DBDA245CDBD1002E15B4 /* SceneDelegate.swift */,
-				0AE0DBDC245CDBD1002E15B4 /* ViewController.swift */,
-				0AE0DBDE245CDBD1002E15B4 /* Main.storyboard */,
-				0AE0DBE4245CDBD8002E15B4 /* Assets.xcassets */,
-				0AE0DBE6245CDBD8002E15B4 /* LaunchScreen.storyboard */,
+				0AE0DBF2245CDE8D002E15B4 /* ViewController */,
+				0AE0DBF1245CDE71002E15B4 /* Views */,
+				0AF175DE245CE09A0081FC02 /* Supporting file */,
 				0AE0DBE9245CDBD8002E15B4 /* Info.plist */,
-				0AE0DBE1245CDBD1002E15B4 /* NoteBook.xcdatamodeld */,
+				0AF175DD245CE0820081FC02 /* DataModel */,
 			);
 			path = NoteBook;
+			sourceTree = "<group>";
+		};
+		0AE0DBF1245CDE71002E15B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0DBDE245CDBD1002E15B4 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0AE0DBF2245CDE8D002E15B4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0DBEF245CDE18002E15B4 /* NoteBookTableViewController.swift */,
+				0AE0DBDC245CDBD1002E15B4 /* ItemViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0AF175DD245CE0820081FC02 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				0AF175DF245CE13E0081FC02 /* Categorie.swift */,
+				0AF175E1245CE14C0081FC02 /* Item.swift */,
+				0AE0DBE1245CDBD1002E15B4 /* NoteBook.xcdatamodeld */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		0AF175DE245CE09A0081FC02 /* Supporting file */ = {
+			isa = PBXGroup;
+			children = (
+				0AE0DBE4245CDBD8002E15B4 /* Assets.xcassets */,
+				0AE0DBE6245CDBD8002E15B4 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting file";
+			sourceTree = "<group>";
+		};
+		66835E21538D513EE0D2C591 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F0EB1A4DB6F83A8EA96B41A /* Pods_NoteBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBC86C53F9D08D0B4A6D1DE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C2EA3320645C41C01F534615 /* Pods-NoteBook.debug.xcconfig */,
+				FEAC81B7A07AA736877193B7 /* Pods-NoteBook.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0AE0DBEC245CDBD8002E15B4 /* Build configuration list for PBXNativeTarget "NoteBook" */;
 			buildPhases = (
+				7C126E489FA3D3D250243201 /* [CP] Check Pods Manifest.lock */,
 				0AE0DBD1245CDBD1002E15B4 /* Sources */,
 				0AE0DBD2245CDBD1002E15B4 /* Frameworks */,
 				0AE0DBD3245CDBD1002E15B4 /* Resources */,
+				3E6DD70C71FFBD423EAB2269 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,13 +203,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3E6DD70C71FFBD423EAB2269 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoteBook/Pods-NoteBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NoteBook/Pods-NoteBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NoteBook/Pods-NoteBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7C126E489FA3D3D250243201 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NoteBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0AE0DBD1245CDBD1002E15B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE0DBDD245CDBD1002E15B4 /* ViewController.swift in Sources */,
+				0AE0DBF0245CDE18002E15B4 /* NoteBookTableViewController.swift in Sources */,
+				0AE0DBDD245CDBD1002E15B4 /* ItemViewController.swift in Sources */,
 				0AE0DBD9245CDBD1002E15B4 /* AppDelegate.swift in Sources */,
+				0AF175E0245CE13E0081FC02 /* Categorie.swift in Sources */,
+				0AF175E2245CE14C0081FC02 /* Item.swift in Sources */,
 				0AE0DBE3245CDBD1002E15B4 /* NoteBook.xcdatamodeld in Sources */,
 				0AE0DBDB245CDBD1002E15B4 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +398,7 @@
 		};
 		0AE0DBED245CDBD8002E15B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2EA3320645C41C01F534615 /* Pods-NoteBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +416,7 @@
 		};
 		0AE0DBEE245CDBD8002E15B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEAC81B7A07AA736877193B7 /* Pods-NoteBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
